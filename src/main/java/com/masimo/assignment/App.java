@@ -30,7 +30,13 @@ public class App {
         App.parseArguments(args);
         Float[] data = App.parseInputData();
         
-        Function function = new Function(data, n, c);
+        Function function = null;
+        try {
+            function = new Function(data, n, c);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e);
+            System.exit(3);
+        }
         Float[][] result = function.calc();
 
         App.printResult(result);
