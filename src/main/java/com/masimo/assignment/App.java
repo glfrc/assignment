@@ -71,6 +71,9 @@ public class App {
         }
     }
 
+    /**
+     * Parses input file data
+     */
     private static Float[] parseInputData() {
 
         Stream<String> input = null;
@@ -87,6 +90,9 @@ public class App {
         return data;
     }
 
+    /**
+     * Prints result as a formatted matrix
+     */
     private static void printResult(final Float[][] result) {
 
         for (Float[] row : result) {
